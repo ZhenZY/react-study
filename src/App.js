@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+/**
+ * 定义组件:
+ * 1. js 函数 
+ *    function fn() {return <div></div>}
+ * 2. es6 class 定义
+ *    class fn extends React.Componnet {
+ *      render() { return <div></div> }
+ *    }
+ */
+
+// 正常返回应该是字符串类，使用 jsx 语法可直接返回标签
+// jsx: 标签语法，js 的语法扩展
+// props: 把 <App /> 中所有属性转换为对象保存，通过 props. 来访问属性
+// props （只读）
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>{props.name}</div>
   );
 }
 
