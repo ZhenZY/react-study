@@ -1,24 +1,33 @@
 import React from 'react';
 import './App.css';
 
-/**
- * 定义组件:
- * 1. js 函数 
- *    function fn() {return <div></div>}
- * 2. es6 class 定义
- *    class fn extends React.Componnet {
- *      render() { return <div></div> }
- *    }
- */
-
-// 正常返回应该是字符串类，使用 jsx 语法可直接返回标签
-// jsx: 标签语法，js 的语法扩展
-// props: 把 <App /> 中所有属性转换为对象保存，通过 props. 来访问属性
-// props （只读）
 function App(props) {
   return (
-    <div>{props.name}</div>
-  );
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {props.date.toLocaleTimeString()}.</h2>
+    </div>
+  )
 }
+// class App extends React.Component {
+
+//   constructor(props) {
+
+//     // 将 props 传递到父类的构造函数中
+//     super(props);
+//     this.state = {
+//       date: new Date()
+//     };
+//   }
+  
+//   render() {
+//     return (
+//       <div>
+//         <h1>Hello, world!</h1>
+//         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+//       </div>
+//     );
+//   }
+// }
 
 export default App;
