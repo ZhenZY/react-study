@@ -1,5 +1,4 @@
 import React from 'react';
-import { directive } from '@babel/types';
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
