@@ -7,12 +7,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// 因为 props 是只读属性，不能更改 date 的值，所以，只能通过 1s 渲染一次组件实现时钟
-function tick() {
-  ReactDOM.render(<App date={new Date()} />, document.getElementById('root'));
-}
-
-setInterval(tick, 1000);
+// 挂载（mount）：组件第一次被渲染到 DOM 中
+// unmount: 卸载
+ReactDOM.render(<App />, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
